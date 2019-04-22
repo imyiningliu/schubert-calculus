@@ -26,7 +26,7 @@ Get cutout functions corresponding to schubert variety of a grassmannian, indexe
 ```python
 >>> cutout(grass, young)
 ```
-Get permutations for maximal cutout:
+Get permutations for maximal cutout: (make sure to add zeros when creating Young object so that the length matches ``k``).
 ```python
 >>> grass = Gr(2, 4)
 >>> A = Young([1, 0])

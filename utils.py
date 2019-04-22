@@ -59,13 +59,13 @@ def intersection_cardinality(grass, A, B, C):
     r""" Returns dim of intersection.
         Args:
         :grass: the Grassmannian we're working with
-        :A, B, C: Young diagrams
+        :A, B, C: Young diagrams. Partition length needs to be grass.k
         """
     n = grass.n
     k = grass.k
-    
+
     # all_equations = set(combinations(range(grass.n), grass.k))
-    cutout_A = cutout(grass, A) # get cutout equations
+    cutout_A = cutout(grass, A)  # get cutout equations
     cutout_B = cutout(grass, B)
     cutout_C = cutout(grass, C)
     all_permutations = list(permutations(range(grass.n)))
@@ -73,7 +73,7 @@ def intersection_cardinality(grass, A, B, C):
     max_union_size = 0
     
     # get two permutations permute A and B
-    pi_pairs = list(combinations(all_permutations, 2)) # combinations_with_replacement?
+    pi_pairs = list(combinations(all_permutations, 2))  # combinations_with_replacement?
     for pi_1, pi_2 in pi_pairs:
         perm_cutout_A, perm_cutout_B = permute(pi_1, cutout_A), permute(pi_2, cutout_B)
         union_size = len(perm_cutout_A.union(perm_cutout_B, cutout_C))
