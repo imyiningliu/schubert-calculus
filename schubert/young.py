@@ -9,6 +9,7 @@ class Young(object):
         Args:
             :partition: a list of non-increasing integers.
 
+
         Example:
             >>> from schubert.young import *
             >>> young = schubert.Young([4, 3, 3])
@@ -31,3 +32,4 @@ class Young(object):
                     string += str(char) + " "
             string += '\n'
         return string[:-1]
+

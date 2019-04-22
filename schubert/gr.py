@@ -21,7 +21,7 @@ class Gr(object):
         self.size = (k, n)
 
     def __repr__(self):
-        return 'Gr(%s, %s)'%(self.k, self.n)
+        return 'Gr(%s, %s)' % (self.k, self.n)
 
     def schubert_cell(self, young):
         r""" Returns a schubert cell indexed by YOUNG diagram. "-1" refers to "star".
